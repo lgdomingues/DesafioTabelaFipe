@@ -12,6 +12,7 @@
 		4380FBED2017FB99008714FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4380FBEB2017FB99008714FD /* Main.storyboard */; };
 		4380FBEF2017FB99008714FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4380FBEE2017FB99008714FD /* Assets.xcassets */; };
 		4380FBF22017FB99008714FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4380FBF02017FB99008714FD /* LaunchScreen.storyboard */; };
+		C3D9E1BE139BC55FAF44DC39 /* Pods_DesafioTabelaFipe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF3BBEEAD916F269A30EDF5 /* Pods_DesafioTabelaFipe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		4380FBEE2017FB99008714FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4380FBF12017FB99008714FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4380FBF32017FB99008714FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CD5A5AF3054740031E94B18 /* Pods-DesafioTabelaFipe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioTabelaFipe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesafioTabelaFipe/Pods-DesafioTabelaFipe.debug.xcconfig"; sourceTree = "<group>"; };
+		B3F2EF688EA249D1BB1D9B2F /* Pods-DesafioTabelaFipe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioTabelaFipe.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesafioTabelaFipe/Pods-DesafioTabelaFipe.release.xcconfig"; sourceTree = "<group>"; };
+		CCF3BBEEAD916F269A30EDF5 /* Pods_DesafioTabelaFipe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioTabelaFipe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3D9E1BE139BC55FAF44DC39 /* Pods_DesafioTabelaFipe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01FFC6E3582F8C580FC1AE84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCF3BBEEAD916F269A30EDF5 /* Pods_DesafioTabelaFipe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		02B045DA3410541A1EAE07B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4CD5A5AF3054740031E94B18 /* Pods-DesafioTabelaFipe.debug.xcconfig */,
+				B3F2EF688EA249D1BB1D9B2F /* Pods-DesafioTabelaFipe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4380FBDB2017FB99008714FD = {
 			isa = PBXGroup;
 			children = (
 				4380FBE62017FB99008714FD /* DesafioTabelaFipe */,
 				4380FBE52017FB99008714FD /* Products */,
+				02B045DA3410541A1EAE07B1 /* Pods */,
+				01FFC6E3582F8C580FC1AE84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4380FBF62017FB99008714FD /* Build configuration list for PBXNativeTarget "DesafioTabelaFipe" */;
 			buildPhases = (
+				0983BE6FAE7ECC2DBF34C1D6 /* [CP] Check Pods Manifest.lock */,
 				4380FBE02017FB99008714FD /* Sources */,
 				4380FBE12017FB99008714FD /* Frameworks */,
 				4380FBE22017FB99008714FD /* Resources */,
+				977C440945336BF20564831F /* [CP] Embed Pods Frameworks */,
+				40313A3F320E652B1ACBA9F0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0983BE6FAE7ECC2DBF34C1D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DesafioTabelaFipe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40313A3F320E652B1ACBA9F0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DesafioTabelaFipe/Pods-DesafioTabelaFipe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		977C440945336BF20564831F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DesafioTabelaFipe/Pods-DesafioTabelaFipe-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DesafioTabelaFipe/Pods-DesafioTabelaFipe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4380FBE02017FB99008714FD /* Sources */ = {
@@ -272,6 +355,7 @@
 		};
 		4380FBF72017FB99008714FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CD5A5AF3054740031E94B18 /* Pods-DesafioTabelaFipe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +370,7 @@
 		};
 		4380FBF82017FB99008714FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3F2EF688EA249D1BB1D9B2F /* Pods-DesafioTabelaFipe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
